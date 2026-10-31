@@ -4,5 +4,9 @@
     <color name="color_missed_call">@color/md_red_500_dark</color>
     <color name="color_outgoing_call">@color/md_green_600</color>
     <color name="color_incoming_call">@color/md_blue_600</color>
-    <color name="hyper_icon_background">#0D84FF</color>
+    <color name="default_background_color">@color/hyper_background</color>
+    <color name="default_text_color">@color/hyper_text_primary</color>
+    <color name="default_primary_color">@color/hyper_accent</color>
+    <color name="default_accent_color">@color/hyper_accent</color>
+    <color name="default_app_icon_color">@color/hyper_accent</color>
 </resources>

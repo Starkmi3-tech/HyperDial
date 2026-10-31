@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="hyper_background">#000000</color>
+    <color name="hyper_surface">#1C1C1E</color>
+    <color name="hyper_text_primary">#FFFFFF</color>
+    <color name="hyper_text_secondary">#8D8D93</color>
+    <color name="hyper_accent">#3D9BFF</color>
+    <color name="hyper_selected">#16263A</color>
+    <color name="hyper_ripple">#1FFFFFFF</color>
+</resources>

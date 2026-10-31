@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Same mapping as values-v31; needed so commons' values-night-v31 does not win in dark mode. -->
+<resources>
+    <color name="you_status_bar_color">@color/hyper_background</color>
+    <color name="you_contextual_status_bar_color">@color/hyper_accent</color>
+    <color name="you_background_color">@color/hyper_background</color>
+    <color name="you_bottom_bar_color">@color/hyper_surface</color>
+    <color name="you_neutral_text_color">@color/hyper_text_primary</color>
+    <color name="you_primary_color">@color/hyper_accent</color>
+    <color name="you_primary_dark_color">@color/hyper_accent</color>
+    <color name="you_dialog_background_color">@color/hyper_surface</color>
+    <color name="you_surface_color">@color/hyper_surface</color>
+    <color name="you_selected_item_background_color">@color/hyper_selected</color>
+    <color name="you_ripple_color">@color/hyper_ripple</color>
+</resources>

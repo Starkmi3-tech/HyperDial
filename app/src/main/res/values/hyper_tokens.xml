@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- HyperDial design tokens (spec section 5). Dark values live in values-night. -->
+<resources>
+    <color name="hyper_background">#F7F7F7</color>
+    <color name="hyper_surface">#FFFFFF</color>
+    <color name="hyper_text_primary">#000000</color>
+    <color name="hyper_text_secondary">#8A8A8E</color>
+    <color name="hyper_accent">#0D84FF</color>
+    <color name="hyper_selected">#E5F0FF</color>
+    <color name="hyper_ripple">#1F000000</color>
+    <color name="hyper_call_green">#21C063</color>
+    <color name="hyper_end_red">#F2453D</color>
+    <color name="hyper_incall_top">#2B2D33</color>
+    <color name="hyper_incall_bottom">#0E0F12</color>
+    <color name="hyper_action_bg">#1FFFFFFF</color>
+    <color name="hyper_icon_background">#0D84FF</color>
+
+    <dimen name="hyper_title_large">32sp</dimen>
+    <dimen name="hyper_title_small">18sp</dimen>
+    <dimen name="hyper_radius">20dp</dimen>
+    <dimen name="hyper_row_height">72dp</dimen>
+    <dimen name="hyper_avatar">44dp</dimen>
+    <dimen name="hyper_key_size">76dp</dimen>
+    <dimen name="hyper_key_digit">32sp</dimen>
+    <dimen name="hyper_key_letters">11sp</dimen>
+    <dimen name="hyper_dialed_number">36sp</dimen>
+    <dimen name="hyper_call_button">64dp</dimen>
+    <dimen name="hyper_action_size">64dp</dimen>
+    <dimen name="hyper_end_button">72dp</dimen>
+</resources>
