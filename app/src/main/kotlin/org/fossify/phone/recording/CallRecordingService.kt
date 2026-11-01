@@ -63,6 +63,7 @@ class CallRecordingService : Service() {
         if (file != null) {
             session.end(file, SystemClock.elapsedRealtime() - startElapsed)
             currentFile = null
+            DriveUploader.enqueue(applicationContext)
         }
         stopForegroundCompat()
         stopSelf()
@@ -101,7 +102,7 @@ class CallRecordingService : Service() {
         const val EXTRA_NAME = "extra_name"
         private const val CHANNEL_ID = "call_recording"
         private const val NOTIFICATION_ID = 42
-        private const val RECORDINGS_DIR = "recordings"
+        const val RECORDINGS_DIR = "recordings"
 
         fun startFor(context: Context, number: String = "", name: String = "") {
             val intent = Intent(context, CallRecordingService::class.java).apply {

@@ -146,6 +146,7 @@ dependencies {
     implementation(libs.geocoder)
     implementation(libs.play.services.auth)
     implementation(libs.okhttp)
+    implementation(libs.work.runtime.ktx)
     detektPlugins(libs.compose.detekt)
     testImplementation(libs.junit)
 }
