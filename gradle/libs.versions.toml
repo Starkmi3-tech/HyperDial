@@ -19,7 +19,7 @@ libphonenumberVersion = "9.0.40"
 #Drive upload
 playServicesAuth = "21.2.0"
 okhttp = "4.12.0"
-workRuntime = "2.9.1"
+workRuntime = "2.12.0"
 #Test
 junit = "4.13.2"
 #build
