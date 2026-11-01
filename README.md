@@ -9,6 +9,18 @@ HyperDial is based on [Fossify Phone](https://github.com/FossifyOrg/Phone).
 All call handling is Fossify Phone's; HyperDial changes how it looks and adds
 call recording. It is not affiliated with Fossify or Xiaomi.
 
+## Download
+
+Get the latest build from the
+[**Releases**](https://github.com/Starkmi3-tech/HyperDial/releases/latest) page,
+or download the APK directly:
+
+**[⬇ HyperDial-v1.0.0-debug.apk](https://github.com/Starkmi3-tech/HyperDial/releases/download/v1.0.0/HyperDial-v1.0.0-debug.apk)**
+
+This is a debug-signed build for testing and self-use. After installing, set
+HyperDial as your default Phone app and grant the microphone, phone and
+call-log permissions.
+
 ## Screenshots
 
 | Call History | Contacts | Dialpad |
