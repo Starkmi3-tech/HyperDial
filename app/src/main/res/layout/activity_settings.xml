@@ -446,6 +446,62 @@
                 layout="@layout/divider" />
 
             <TextView
+                android:id="@+id/settings_recording_section_label"
+                style="@style/SettingsSectionLabelStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/call_recording" />
+
+            <RelativeLayout
+                android:id="@+id/settings_record_calls_holder"
+                style="@style/SettingsHolderSwitchStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <org.fossify.commons.views.MyMaterialSwitch
+                    android:id="@+id/settings_record_calls"
+                    style="@style/SettingsSwitchStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/record_calls" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/settings_google_account_holder"
+                style="@style/SettingsHolderTextViewOneLinerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <org.fossify.commons.views.MyTextView
+                    android:id="@+id/settings_google_account"
+                    style="@style/SettingsTextLabelStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sign_in_to_google" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/settings_recordings_holder"
+                style="@style/SettingsHolderTextViewOneLinerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <org.fossify.commons.views.MyTextView
+                    android:id="@+id/settings_recordings"
+                    style="@style/SettingsTextLabelStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/call_recordings" />
+
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/settings_recording_divider"
+                layout="@layout/divider" />
+
+            <TextView
                 android:id="@+id/settings_migration_section_label"
                 style="@style/SettingsSectionLabelStyle"
                 android:layout_width="match_parent"

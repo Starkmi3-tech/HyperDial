@@ -41,6 +41,7 @@ import org.fossify.phone.extensions.canLaunchAccountsConfiguration
 import org.fossify.phone.extensions.config
 import org.fossify.phone.extensions.launchAccountsConfiguration
 import org.fossify.phone.helpers.RecentsHelper
+import org.fossify.phone.recording.DriveClient
 import org.fossify.phone.models.RecentCall
 import java.util.Locale
 import kotlin.system.exitProcess
@@ -58,6 +59,9 @@ class SettingsActivity : SimpleActivity() {
     }
 
     private val binding by viewBinding(ActivitySettingsBinding::inflate)
+
+    private val googleSignInLauncher =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { setupGoogleAccount() }
     private val getContent =
         registerForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
             if (uri != null) {
@@ -114,6 +118,9 @@ class SettingsActivity : SimpleActivity() {
         setupAlwaysShowFullscreen()
         setupCallsExport()
         setupCallsImport()
+        setupRecordCalls()
+        setupGoogleAccount()
+        setupRecordingsScreen()
         updateTextColors(binding.settingsHolder)
 
         binding.apply {
@@ -123,6 +130,7 @@ class SettingsActivity : SimpleActivity() {
                 settingsStartupLabel,
                 settingsCallsLabel,
                 settingsDialpadSectionLabel,
+                settingsRecordingSectionLabel,
                 settingsMigrationSectionLabel
             ).forEach {
                 it.setTextColor(getProperPrimaryColor())
@@ -133,6 +141,35 @@ class SettingsActivity : SimpleActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         updateMenuItemColors(menu)
         return super.onCreateOptionsMenu(menu)
+    }
+
+    private fun setupRecordCalls() {
+        binding.settingsRecordCalls.isChecked = config.recordCalls
+        binding.settingsRecordCallsHolder.setOnClickListener {
+            binding.settingsRecordCalls.toggle()
+            config.recordCalls = binding.settingsRecordCalls.isChecked
+        }
+    }
+
+    private fun setupGoogleAccount() {
+        val client = DriveClient(this)
+        binding.settingsGoogleAccount.text = getString(
+            if (client.hasAccount()) R.string.sign_out_of_google else R.string.sign_in_to_google
+        )
+        binding.settingsGoogleAccountHolder.setOnClickListener {
+            if (client.hasAccount()) {
+                client.signOut()
+                setupGoogleAccount()
+            } else {
+                googleSignInLauncher.launch(client.signInIntent())
+            }
+        }
+    }
+
+    private fun setupRecordingsScreen() {
+        binding.settingsRecordingsHolder.setOnClickListener {
+            startActivity(Intent(this, RecordingsActivity::class.java))
+        }
     }
 
     private fun setupOptionsMenu() {
