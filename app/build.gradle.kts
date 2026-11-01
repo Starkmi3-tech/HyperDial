@@ -144,6 +144,8 @@ dependencies {
     implementation(libs.eventbus)
     implementation(libs.libphonenumber)
     implementation(libs.geocoder)
+    implementation(libs.play.services.auth)
+    implementation(libs.okhttp)
     detektPlugins(libs.compose.detekt)
     testImplementation(libs.junit)
 }
