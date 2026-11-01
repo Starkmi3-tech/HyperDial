@@ -9,6 +9,14 @@ HyperDial is based on [Fossify Phone](https://github.com/FossifyOrg/Phone).
 All call handling is Fossify Phone's; HyperDial changes how it looks and adds
 call recording. It is not affiliated with Fossify or Xiaomi.
 
+## Screenshots
+
+| Call History | Contacts | Dialpad |
+|:---:|:---:|:---:|
+| ![Call History](docs/screenshots/01-call-history.png) | ![Contacts](docs/screenshots/02-contacts.png) | ![Dialpad](docs/screenshots/03-dialpad.png) |
+
+> Contact names and photos are blurred for privacy.
+
 ## Features
 
 - **HyperOS-style interface** — large collapsing screen title, bottom tabs, and
