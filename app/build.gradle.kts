@@ -145,4 +145,5 @@ dependencies {
     implementation(libs.libphonenumber)
     implementation(libs.geocoder)
     detektPlugins(libs.compose.detekt)
+    testImplementation(libs.junit)
 }
