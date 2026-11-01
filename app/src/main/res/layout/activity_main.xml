@@ -5,10 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <org.fossify.commons.views.MySearchMenu
-        android:id="@+id/main_menu"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/main_appbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:background="@color/hyper_background"
+        android:stateListAnimator="@null"
+        app:elevation="0dp"
+        app:liftOnScroll="false">
+
+        <org.fossify.commons.views.MySearchMenu
+            android:id="@+id/main_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="noScroll" />
+
+        <TextView
+            android:id="@+id/main_large_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/normal_margin"
+            android:paddingTop="@dimen/tiny_margin"
+            android:paddingEnd="@dimen/normal_margin"
+            android:paddingBottom="@dimen/small_margin"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/hyper_text_primary"
+            android:textSize="@dimen/hyper_title_large"
+            android:textStyle="bold"
+            app:layout_scrollFlags="scroll" />
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main_holder"
@@ -34,11 +61,12 @@
             android:layout_marginBottom="@dimen/activity_margin"
             android:contentDescription="@string/dialpad"
             android:elevation="@dimen/medium_margin"
-            android:padding="@dimen/activity_margin"
             android:src="@drawable/ic_dialpad_vector"
-            app:backgroundTint="@color/color_primary"
+            app:backgroundTint="@color/hyper_accent"
+            app:fabCustomSize="@dimen/hyper_call_button"
             app:layout_constraintBottom_toTopOf="@+id/main_tabs_holder"
             app:layout_constraintEnd_toEndOf="parent"
+            app:maxImageSize="@dimen/normal_icon_size"
             app:rippleColor="@color/pressed_item_foreground" />
 
         <com.google.android.material.tabs.TabLayout
