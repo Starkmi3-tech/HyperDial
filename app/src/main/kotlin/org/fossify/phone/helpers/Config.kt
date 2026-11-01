@@ -135,4 +135,8 @@ class Config(context: Context) : BaseConfig(context) {
     var alwaysShowFullscreen: Boolean
         get() = prefs.getBoolean(ALWAYS_SHOW_FULLSCREEN, false)
         set(alwaysShowFullscreen) = prefs.edit().putBoolean(ALWAYS_SHOW_FULLSCREEN, alwaysShowFullscreen).apply()
+
+    var recordCalls: Boolean
+        get() = prefs.getBoolean(RECORD_CALLS, false)
+        set(recordCalls) = prefs.edit().putBoolean(RECORD_CALLS, recordCalls).apply()
 }
